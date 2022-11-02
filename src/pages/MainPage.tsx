@@ -7,7 +7,7 @@ const url = `https://api.json-generator.com/templates/ZM1r0eic3XEy/data
 interface JobPost {
   name: string;
   pictures: [string];
-  id: number;
+  id: string;
   title: string;
   location: { lat: number; long: number };
 }
@@ -31,6 +31,7 @@ export const MainPage = () => {
               pictureURL={job.pictures[0]}
               lat={job.location.lat}
               lng={job.location.long}
+              id={job.id}
             />
           ))}
         </ul>
