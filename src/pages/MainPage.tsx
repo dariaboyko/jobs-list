@@ -1,18 +1,12 @@
 import { BlueBackground } from "../components/backgrounds/BlueBackground";
 import { JobCard } from "../components/cards/JobCard";
 import { useFetch } from "usehooks-ts";
+import { IJob } from "../components/interfaces/JobInterface";
 const url = `https://api.json-generator.com/templates/ZM1r0eic3XEy/data
 `;
 
-interface JobPost {
-  name: string;
-  pictures: [string];
-  id: string;
-  title: string;
-  location: { lat: number; long: number };
-}
 export const MainPage = () => {
-  const { data, error } = useFetch<JobPost[]>(url, {
+  const { data, error } = useFetch<IJob[]>(url, {
     headers: {
       Authorization: "Bearer wm3gg940gy0xek1ld98uaizhz83c6rh2sir9f9fu",
     },
@@ -28,9 +22,8 @@ export const MainPage = () => {
               key={job.name + Math.random()}
               title={job.title}
               name={job.name}
-              pictureURL={job.pictures[0]}
-              lat={job.location.lat}
-              lng={job.location.long}
+              pictures={job.pictures}
+              location={job.location}
               id={job.id}
             />
           ))}
