@@ -4,4 +4,5 @@ export type IJob = {
   id: string;
   title: string;
   location: { lat: number; long: number };
+  salary?: string;
 };

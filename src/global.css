@@ -3,7 +3,10 @@
 @tailwind utilities;
 @font-face {
   font-family: "Proxima Nova";
-  src: url("../font/proxima_nova_font-webfont.woff");
+  src: url("../font/proxima_nova_font-webfont.woff2") format("woff2"),
+    url("../font/proxima_nova_font-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 *,
 *:before,

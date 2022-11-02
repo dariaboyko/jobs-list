@@ -2,8 +2,7 @@ import { BlueBackground } from "../components/backgrounds/BlueBackground";
 import { JobCard } from "../components/cards/JobCard";
 import { useFetch } from "usehooks-ts";
 import { IJob } from "../components/interfaces/JobInterface";
-const url = `https://api.json-generator.com/templates/ZM1r0eic3XEy/data
-`;
+const url = `https://api.json-generator.com/templates/ZM1r0eic3XEy/data`;
 
 export const MainPage = () => {
   const { data, error } = useFetch<IJob[]>(url, {
@@ -11,7 +10,6 @@ export const MainPage = () => {
       Authorization: "Bearer wm3gg940gy0xek1ld98uaizhz83c6rh2sir9f9fu",
     },
   });
-  console.log(data);
   if (error) return <p>There is an error.</p>;
   return (
     <BlueBackground>
