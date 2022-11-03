@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { useFetch } from "usehooks-ts";
 import { IJob } from "../components/interfaces/JobInterface";
 import { ReturnButton } from "../components/buttons/ReturnButton";
+import { LocationCard } from "../components/cards/LocationCard";
 import dayjs from "dayjs";
 const url = `https://api.json-generator.com/templates/ZM1r0eic3XEy/data`;
 export const JobDetailsPage = () => {
@@ -115,7 +116,16 @@ export const JobDetailsPage = () => {
         </div>
         <ReturnButton className="mt-[90px] ml-[-50px] mb-[160px]" />
       </section>
-      <section className="w-[400px] h-[435px] bg-blueBG"></section>
+      <LocationCard
+        address={Post.address}
+        phone={Post.phone}
+        email={Post.email}
+        title={Post.title}
+        name={Post.name}
+        pictures={Post.pictures}
+        location={Post.location}
+        id={Post.id}
+      />
     </div>
   ) : (
     <div>Loading...</div>

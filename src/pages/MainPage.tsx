@@ -23,6 +23,7 @@ export const MainPage = () => {
               pictures={job.pictures}
               location={job.location}
               id={job.id}
+              createdAt={job.createdAt}
             />
           ))}
         </ul>

@@ -9,4 +9,7 @@ export type IJob = {
   description?: string;
   benefits?: [string];
   employment_type?: [string];
+  address?: string;
+  phone?: string;
+  email?: string;
 };

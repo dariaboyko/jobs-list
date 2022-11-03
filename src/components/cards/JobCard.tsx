@@ -3,12 +3,20 @@ import BookmarkSVG from "../../assets/icons/BookmarkSVG";
 import { NavLink } from "react-router-dom";
 import { IJob } from "../interfaces/JobInterface";
 import { useFetch } from "usehooks-ts";
+import dayjs from "dayjs";
 type Location = {
   locality: string;
   city: string;
   countryName?: string;
 };
-export const JobCard = ({ title, name, pictures, id, location }: IJob) => {
+export const JobCard = ({
+  title,
+  name,
+  pictures,
+  id,
+  location,
+  createdAt,
+}: IJob) => {
   const url = `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${location.lat}&longitude=${location.long}&localityLanguage=en`;
   const { data, error } = useFetch<Location>(url);
   console.log(data);
@@ -16,6 +24,9 @@ export const JobCard = ({ title, name, pictures, id, location }: IJob) => {
     <NavLink to={id}>
       <li className="p-[24px] pl-[16px] flex gap-[26px] bg-white shadow-card rounded-lg relative">
         <BookmarkSVG className="absolute right-[16px]" />
+        <p className="font-['Proxima_Nova'] text-[16px] font-normal text-[#878D9D] absolute right-[16px] bottom-[24px]">
+          Posted {dayjs().diff(dayjs(createdAt), "day")} days ago
+        </p>
         <img
           src={pictures[0]}
           className="rounded-full w-[85px] h-[85px]"

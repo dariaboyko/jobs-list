@@ -1,28 +1,5 @@
 @font-face {
   font-family: "Proxima Nova";
-  src: url("ProximaNovaCond-LightIt.eot");
-  src: local("Proxima Nova Condensed Light Italic"),
-    local("ProximaNovaCond-LightIt"),
-    url("ProximaNovaCond-LightIt.eot?#iefix") format("embedded-opentype"),
-    url("ProximaNovaCond-LightIt.woff") format("woff"),
-    url("ProximaNovaCond-LightIt.ttf") format("truetype");
-  font-weight: 300;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Proxima Nova";
-  src: url("ProximaNova-LightIt.eot");
-  src: local("Proxima Nova Light Italic"), local("ProximaNova-LightIt"),
-    url("ProximaNova-LightIt.eot?#iefix") format("embedded-opentype"),
-    url("ProximaNova-LightIt.woff") format("woff"),
-    url("ProximaNova-LightIt.ttf") format("truetype");
-  font-weight: 300;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Proxima Nova";
   src: url("ProximaNova-Extrabld.eot");
   src: local("Proxima Nova Extrabold"), local("ProximaNova-Extrabld"),
     url("ProximaNova-Extrabld.eot?#iefix") format("embedded-opentype"),
@@ -62,7 +39,7 @@
     url("ProximaNova-Regular.eot?#iefix") format("embedded-opentype"),
     url("ProximaNova-Regular.woff") format("woff"),
     url("ProximaNova-Regular.ttf") format("truetype");
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -136,18 +113,6 @@
 
 @font-face {
   font-family: "Proxima Nova";
-  src: url("ProximaNovaCond-RegularIt.eot");
-  src: local("Proxima Nova Condensed Regular Italic"),
-    local("ProximaNovaCond-RegularIt"),
-    url("ProximaNovaCond-RegularIt.eot?#iefix") format("embedded-opentype"),
-    url("ProximaNovaCond-RegularIt.woff") format("woff"),
-    url("ProximaNovaCond-RegularIt.ttf") format("truetype");
-  font-weight: normal;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Proxima Nova";
   src: url("ProximaNovaExCn-ThinIt.eot");
   src: local("Proxima Nova Extra Condensed Thin Italic"),
     local("ProximaNovaExCn-ThinIt"),
@@ -166,17 +131,6 @@
     url("ProximaNova-SemiboldIt.woff") format("woff"),
     url("ProximaNova-SemiboldIt.ttf") format("truetype");
   font-weight: 600;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Proxima Nova";
-  src: url("ProximaNova-RegularIt.eot");
-  src: local("Proxima Nova Regular Italic"), local("ProximaNova-RegularIt"),
-    url("ProximaNova-RegularIt.eot?#iefix") format("embedded-opentype"),
-    url("ProximaNova-RegularIt.woff") format("woff"),
-    url("ProximaNova-RegularIt.ttf") format("truetype");
-  font-weight: normal;
   font-style: italic;
 }
 
@@ -364,18 +318,6 @@
     url("ProximaNovaExCn-Black.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
-}
-
-@font-face {
-  font-family: "Proxima Nova";
-  src: url("ProximaNovaExCn-RegularIt.eot");
-  src: local("Proxima Nova Extra Condensed Regular Italic"),
-    local("ProximaNovaExCn-RegularIt"),
-    url("ProximaNovaExCn-RegularIt.eot?#iefix") format("embedded-opentype"),
-    url("ProximaNovaExCn-RegularIt.woff") format("woff"),
-    url("ProximaNovaExCn-RegularIt.ttf") format("truetype");
-  font-weight: normal;
-  font-style: italic;
 }
 
 @font-face {
