@@ -5,4 +5,8 @@ export type IJob = {
   title: string;
   location: { lat: number; long: number };
   salary?: string;
+  createdAt?: string;
+  description?: string;
+  benefits?: [string];
+  employment_type?: [string];
 };

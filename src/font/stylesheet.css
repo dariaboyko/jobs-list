@@ -90,18 +90,6 @@
 
 @font-face {
   font-family: "Proxima Nova";
-  src: url("ProximaNovaCond-Semibold.eot");
-  src: local("Proxima Nova Condensed Semibold"),
-    local("ProximaNovaCond-Semibold"),
-    url("ProximaNovaCond-Semibold.eot?#iefix") format("embedded-opentype"),
-    url("ProximaNovaCond-Semibold.woff") format("woff"),
-    url("ProximaNovaCond-Semibold.ttf") format("truetype");
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Proxima Nova";
   src: url("ProximaNovaExCn-SemiboldIt.eot");
   src: local("Proxima Nova Extra Condensed Semibold Italic"),
     local("ProximaNovaExCn-SemiboldIt"),
