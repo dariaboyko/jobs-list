@@ -186,7 +186,7 @@ export const JobDetailsPage = () => {
             pictures={Post.pictures}
             location={Post.location}
             id={Post.id}
-            className="hidden lg:block w-[100%] max-w-[400px] mb-[20px] pt-[5px] mt-[30px]"
+            className="hidden lg:block w-[100%] max-w-[400px] mb-[20px] pt-[5px] mt-[30px] xsm:w-[calc(100% - 30px)]"
           />
         </div>
         <ReturnButton className="mt-[90px] ml-[-50px] mb-[160px] md:hidden" />
