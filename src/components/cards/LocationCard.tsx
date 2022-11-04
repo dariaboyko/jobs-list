@@ -11,8 +11,14 @@ export const LocationCard = ({
   pictures,
   id,
   location,
+  className,
 }: IJob) => (
-  <section className="relative bg-[#2A3047] w-[400px] h-[435px] rounded-lg font-['Proxima_Nova'] text-white text-[20px] font-semibold z-[-2]">
+  <section
+    className={
+      "relative bg-[#2A3047] w-[400px] h-[435px] rounded-lg font-['Proxima_Nova'] text-white text-[20px] font-semibold z-[-2] " +
+      className
+    }
+  >
     <ul className="mx-auto mt-[30px] w-fit flex flex-col gap-[8px]">
       <li>
         Department name. <br />
@@ -24,7 +30,10 @@ export const LocationCard = ({
       <li className="text-[18px] font-normal">{phone}</li>
       <li className="text-[18px] font-normal">{email}</li>
     </ul>
-    <img src={MapIMG} className="absolute top-0 z-[-1]" />
+    <img
+      src={MapIMG}
+      className="absolute top-0 z-[-1] xsm:bottom-0 xsm:top-auto"
+    />
     <LocationSVG
       className="absolute bottom-[150px] left-[70px] scale-[1.7]"
       fill="#D8D8D8"

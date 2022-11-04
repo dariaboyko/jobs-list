@@ -12,4 +12,5 @@ export type IJob = {
   address?: string;
   phone?: string;
   email?: string;
+  className?: string;
 };

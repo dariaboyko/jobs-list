@@ -5,7 +5,7 @@ export const JobInfoHeader = () => (
     <h2 className="font-['Proxima_Nova'] text-[#3A4562] font-bold text-[28px]">
       Job Details
     </h2>
-    <div className="flex gap-[24px] font-['Roboto'] text-[#3A4562] text-[18px] font-normal tracking-[-0.5625px]">
+    <div className="flex gap-[24px] font-['Roboto'] text-[#3A4562] text-[18px] font-normal tracking-[-0.5625px] md:hidden">
       <p className="flex items-center gap-[8px]">
         <BookmarkSVG />
         <span>Save to my list</span>

@@ -1,5 +1,6 @@
 import LocationSVG from "../../assets/icons/LocationSVG";
 import BookmarkSVG from "../../assets/icons/BookmarkSVG";
+import StarSVG from "../../assets/icons/StarSVG";
 import { NavLink } from "react-router-dom";
 import { IJob } from "../interfaces/JobInterface";
 import { useFetch } from "usehooks-ts";
@@ -19,22 +20,28 @@ export const JobCard = ({
 }: IJob) => {
   const url = `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${location.lat}&longitude=${location.long}&localityLanguage=en`;
   const { data, error } = useFetch<Location>(url);
-  console.log(data);
   return (
     <NavLink to={id}>
-      <li className="p-[24px] pl-[16px] flex gap-[26px] bg-white shadow-card rounded-lg relative">
-        <BookmarkSVG className="absolute right-[16px]" />
-        <p className="font-['Proxima_Nova'] text-[16px] font-normal text-[#878D9D] absolute right-[16px] bottom-[24px]">
+      <li className="p-[24px] pl-[16px] flex gap-[26px] bg-white shadow-card rounded-lg relative h-[164px] mx-[10px] md:bg-[#EFF0F5] md:h-[206px] md:px-[16px] md:py-[17px] md:gap-[19px]">
+        <BookmarkSVG className="absolute right-[16px] md:hidden" />
+        <p className="font-['Proxima_Nova'] text-[16px] font-normal text-[#878D9D] absolute right-[16px] bottom-[24px] md:top-[17px] md:text-[14px]">
           Posted {dayjs().diff(dayjs(createdAt), "day")} days ago
         </p>
         <img
           src={pictures[0]}
-          className="rounded-full w-[85px] h-[85px]"
+          className="rounded-full w-[85px] h-[85px] md:min-w-[65px] md:min-h-[65px] md:h-[65px] md:w-[65px]"
           alt={title}
         />
-        <ul className="flex gap-[8px] flex-col">
+        <ul className="flex gap-[8px] flex-col justify-start">
+          <span className="flex absolute top-[73px] right-[186px] md:opacity-[0.7] md:scale-[0.5] md:static md:text-left  md:w-min md:ml-[-22px]">
+            <StarSVG />
+            <StarSVG />
+            <StarSVG />
+            <StarSVG />
+            <StarSVG />
+          </span>
           <li className="font-['Proxima_Nova'] text-[#3A4562] font-bold text-xl">
-            {title}
+            {title.slice(0, 50)}
           </li>
           <li className="font-['Proxima_Nova'] text-[#878D9D] text-[16px] font-normal">
             Department name • <span className="">{name}</span>
